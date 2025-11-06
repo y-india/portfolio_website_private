@@ -9,24 +9,18 @@ st.set_page_config(page_title="About | Yuvraj", layout="wide")
 
 
 import os
-
-def set_background(image_path):
-    full_path = os.path.join(os.path.dirname(__file__), image_path)
-    if not os.path.exists(full_path):
-        st.error(f"Background image not found: {full_path}")
-        return
-    with open(full_path, "rb") as f:
-        data = f.read()
-    encoded = base64.b64encode(data).decode()
+def set_bg(image_file):
+    with open(image_file, "rb") as f:
+        b64 = base64.b64encode(f.read()).decode()
     st.markdown(
         f"""
         <style>
         [data-testid="stAppViewContainer"] {{
-            background: url("data:image/png;base64,{encoded}");
+            background: url("data:image/png;base64,{b64}");
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             background-attachment: fixed;
+            background-repeat: no-repeat;
         }}
         [data-testid="stHeader"] {{background: rgba(0,0,0,0);}}
         [data-testid="stToolbar"] {{right: 2rem;}}
@@ -36,7 +30,7 @@ def set_background(image_path):
     )
 
 # Apply background
-set_background("../SELECTED_background_blur_for_portfolio.PNG")  # no spaces
+set_bg("SELECTED_background_blur_for_portfolio.PNG")  # no spaces
 
 # Set about page background
 
