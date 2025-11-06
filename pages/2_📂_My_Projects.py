@@ -101,28 +101,34 @@ def img_to_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-# Set background
-bg_img = img_to_base64("full_blur_background .PNG")
 
-page_bg = f"""
-<style>
-[data-testid="stAppViewContainer"] {{
-    background: url("data:image/png;base64,{bg_img}");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}}
 
-[data-testid="stHeader"]{{
-    background: rgba(0,0,0,0);
-}}
 
-[data-testid="stSidebar"] {{
-    background-color: rgba(0,0,0,0.25);
-}}
-</style>
-"""
-st.markdown(page_bg, unsafe_allow_html=True)
+import os
+
+def set_background(image_path):
+    full_path = os.path.join(os.path.dirname(__file__), image_path)
+    with open(full_path, "rb") as f:
+        data = f.read()
+    encoded = base64.b64encode(data).decode()
+    st.markdown(
+        f"""
+        <style>
+        [data-testid="stAppViewContainer"] {{
+            background: url("data:image/png;base64,{encoded}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }}
+        [data-testid="stHeader"] {{background: rgba(0,0,0,0);}}
+        [data-testid="stToolbar"] {{right: 2rem;}}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# Apply background
+set_background("../full_blur_background .PNG")
 
 projects = [
     {

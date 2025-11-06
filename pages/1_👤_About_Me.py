@@ -4,9 +4,15 @@ import base64
 # Page settings
 st.set_page_config(page_title="About | Yuvraj", layout="wide")
 
-# Function to set background
+
+
+
+
+import os
+
 def set_background(image_path):
-    with open(image_path, "rb") as f:
+    full_path = os.path.join(os.path.dirname(__file__), image_path)
+    with open(full_path, "rb") as f:
         data = f.read()
     encoded = base64.b64encode(data).decode()
     st.markdown(
@@ -19,13 +25,17 @@ def set_background(image_path):
             background-repeat: no-repeat;
         }}
         [data-testid="stHeader"] {{background: rgba(0,0,0,0);}}
+        [data-testid="stToolbar"] {{right: 2rem;}}
         </style>
         """,
         unsafe_allow_html=True
     )
 
+# Apply background
+set_background("../SELECTED_background_blur_for_portfolio.PNG")
+
 # Set about page background
-set_background("SELECTED_background_blur_for_portfolio.PNG")
+
 
 # ---- ABOUT SECTION ----
 

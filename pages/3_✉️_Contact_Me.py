@@ -9,10 +9,11 @@ def get_base64(path):
 
 st.set_page_config(page_title="Contact Me", layout="centered")
 
+import os
 
-# Function to set background image
 def set_background(image_path):
-    with open(image_path, "rb") as f:
+    full_path = os.path.join(os.path.dirname(__file__), image_path)
+    with open(full_path, "rb") as f:
         data = f.read()
     encoded = base64.b64encode(data).decode()
     st.markdown(
@@ -32,7 +33,7 @@ def set_background(image_path):
     )
 
 # Apply background
-set_background("SELECTED_background_for_portfolio.PNG")
+set_background("../SELECTED_background_for_portfolio.PNG")
 
 # Background
 page_bg_img = """

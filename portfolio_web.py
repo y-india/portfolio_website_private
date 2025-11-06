@@ -25,10 +25,11 @@ st.markdown("""
     Yuvraj Rana <span style="font-weight:400;">Portfolio</span>
 </div>
 """, unsafe_allow_html=True)
+import os
 
-# Function to set background image
 def set_background(image_path):
-    with open(image_path, "rb") as f:
+    full_path = os.path.join(os.path.dirname(__file__), image_path)
+    with open(full_path, "rb") as f:
         data = f.read()
     encoded = base64.b64encode(data).decode()
     st.markdown(
