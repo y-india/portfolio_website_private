@@ -130,10 +130,10 @@ with col1:
 
 with col2:
     if st.button("📂_Projects"):
-        st.switch_page(r"pages\2_📂_My_Projects.py")
+        st.switch_page("pages/2_📂_My_Projects.py")
 
 with col3:
     if st.button("✉️_Contact"):
-        st.switch_page(r"pages\3_✉️_Contact_Me.py")
+        st.switch_page("pages/3_✉️_Contact_Me.py")
 
 
