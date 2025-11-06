@@ -126,7 +126,7 @@ st.markdown(slide, unsafe_allow_html=True)
 col1, col2, col3 = st.columns([1,1,1])
 with col1:
     if st.button("👤_About"):
-        st.switch_page(r"pages\1_👤_About_Me.py")
+        st.switch_page("pages/1_👤_About_Me.py")
 
 with col2:
     if st.button("📂_Projects"):
