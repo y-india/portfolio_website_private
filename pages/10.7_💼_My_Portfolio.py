@@ -78,7 +78,7 @@ st.markdown("""
     </p>
     <br>
     <p style="font-size: 17px; color: #dddddd;">
-        The codebase and repository are <b>private</b>, but I take pride in saying this portfolio
+        The codebase and repository are <b>public on GitHub</b>, and I take pride in saying this portfolio
         reflects both my <b>skills and creativity</b>.
     </p>
 </div>
@@ -86,6 +86,32 @@ st.markdown("""
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
+
+# -----------------------------------------------------------
+# GitHub Link
+# -----------------------------------------------------------
+st.markdown(
+    """
+    <div style="text-align:center;">
+        <a href="https://github.com/y-india/portfolio_website_private" target="_blank">
+            <button style="
+                background-color:#00BFFF;
+                border:none;
+                color:white;
+                padding:14px 28px;
+                font-size:17px;
+                font-weight:600;
+                border-radius:12px;
+                cursor:pointer;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            ">
+            🔗 View Repository on GitHub
+            </button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
