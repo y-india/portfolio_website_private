@@ -4,22 +4,6 @@ import base64
 
 
 
-# ------------ REMOVE TOP SPACE (multi-version safe) ----------
-st.markdown("""
-<style>
-[data-testid="stAppViewContainer"] > .main,
-.main > .block-container,
-.block-container,
-.css-18e3th9,
-.css-1d391kg {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-
-
 
 
 
@@ -27,32 +11,25 @@ st.markdown("""
 # ---------- PAGE SETTINGS ----------
 st.set_page_config(page_title="💼 My Portfolio Project", layout="wide")
 
-# ---------- BACKGROUND ----------
-def img_to_base64(path):
-    with open(path, "rb") as f:
-        return base64.b64encode(f.read()).decode()
-
-bg_img = img_to_base64("full_blur_background .PNG")
-
-st.markdown(f"""
-<style>
-[data-testid="stAppViewContainer"] {{
-    background: url("data:image/png;base64,{bg_img}");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}}
-[data-testid="stHeader"] {{
-    background: rgba(0,0,0,0);
-}}
-[data-testid="stSidebar"] {{
-    background-color: rgba(0,0,0,0.25);
-}}
-</style>
-""", unsafe_allow_html=True)
+# ---------------------- BACKGROUND IMAGE ----------------------
+def set_bg(image_file):
+    with open(image_file,"rb") as f:
+        b64 = base64.b64encode(f.read()).decode()
+    st.markdown(
+        f"""
+        <style>
+        [data-testid="stAppViewContainer"] {{
+            background: url("data:image/png;base64,{b64}");
+            background-size: cover;
+            background-attachment: fixed;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+set_bg("assets/SELECTED_background_blur_for_portfolio.PNG")
 
 # ---------- MAIN CONTENT ----------
-st.markdown("<br><br>", unsafe_allow_html=True)
 
 st.markdown("""
 <div style="

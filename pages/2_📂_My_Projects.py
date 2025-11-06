@@ -10,22 +10,6 @@ def card(img64, title):
     """
 
 
-# ------------ REMOVE TOP SPACE (multi-version safe) ----------
-st.markdown("""
-<style>
-[data-testid="stAppViewContainer"] > .main,
-.main > .block-container,
-.block-container,
-.css-18e3th9,
-.css-1d391kg {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-
-
 
 
 # CSS for overlay buttons
@@ -105,9 +89,10 @@ def img_to_base64(path):
 
 
 
-import os
+
+# ---------------------- BACKGROUND IMAGE ----------------------
 def set_bg(image_file):
-    with open(image_file, "rb") as f:
+    with open(image_file,"rb") as f:
         b64 = base64.b64encode(f.read()).decode()
     st.markdown(
         f"""
@@ -115,12 +100,8 @@ def set_bg(image_file):
         [data-testid="stAppViewContainer"] {{
             background: url("data:image/png;base64,{b64}");
             background-size: cover;
-            background-position: center;
             background-attachment: fixed;
-            background-repeat: no-repeat;
         }}
-        [data-testid="stHeader"] {{background: rgba(0,0,0,0);}}
-        [data-testid="stToolbar"] {{right: 2rem;}}
         </style>
         """,
         unsafe_allow_html=True

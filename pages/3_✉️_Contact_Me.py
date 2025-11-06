@@ -9,9 +9,10 @@ def get_base64(path):
 
 st.set_page_config(page_title="Contact Me", layout="centered")
 
-import os
+
+# ---------------------- BACKGROUND IMAGE ----------------------
 def set_bg(image_file):
-    with open(image_file, "rb") as f:
+    with open(image_file,"rb") as f:
         b64 = base64.b64encode(f.read()).decode()
     st.markdown(
         f"""
@@ -19,12 +20,8 @@ def set_bg(image_file):
         [data-testid="stAppViewContainer"] {{
             background: url("data:image/png;base64,{b64}");
             background-size: cover;
-            background-position: center;
             background-attachment: fixed;
-            background-repeat: no-repeat;
         }}
-        [data-testid="stHeader"] {{background: rgba(0,0,0,0);}}
-        [data-testid="stToolbar"] {{right: 2rem;}}
         </style>
         """,
         unsafe_allow_html=True
