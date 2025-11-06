@@ -49,7 +49,7 @@ def set_background(image_path):
     )
 
 # Apply background
-set_background("SELECTED_background_blur_for_portfolio.PNG")
+set_background("assets/SELECTED_background_blur_for_portfolio.PNG")
 
 # ⬇️ tweak: adjust padding to center text more naturally on most screens
 st.markdown("""

@@ -30,7 +30,7 @@ def set_bg(image_file):
     )
 
 # Apply background
-set_bg("SELECTED_background_blur_for_portfolio.PNG")  # no spaces
+set_bg("assets/SELECTED_background_blur_for_portfolio.PNG")  # no spaces
 
 # Set about page background
 
