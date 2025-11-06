@@ -12,6 +12,9 @@ import os
 
 def set_background(image_path):
     full_path = os.path.join(os.path.dirname(__file__), image_path)
+    if not os.path.exists(full_path):
+        st.error(f"Background image not found: {full_path}")
+        return
     with open(full_path, "rb") as f:
         data = f.read()
     encoded = base64.b64encode(data).decode()
@@ -23,6 +26,7 @@ def set_background(image_path):
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
         }}
         [data-testid="stHeader"] {{background: rgba(0,0,0,0);}}
         [data-testid="stToolbar"] {{right: 2rem;}}
@@ -32,7 +36,7 @@ def set_background(image_path):
     )
 
 # Apply background
-set_background("../SELECTED_background_blur_for_portfolio.PNG")
+set_background("../SELECTED_background_blur_for_portfolio.PNG")  # no spaces
 
 # Set about page background
 
