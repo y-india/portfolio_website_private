@@ -10,25 +10,21 @@ def get_base64(path):
 st.set_page_config(page_title="Contact Me", layout="centered")
 
 
-# ---------------------- BACKGROUND IMAGE ----------------------
-def set_bg(image_file):
-    with open(image_file,"rb") as f:
-        b64 = base64.b64encode(f.read()).decode()
-    st.markdown(
-        f"""
-        <style>
-        [data-testid="stAppViewContainer"] {{
-            background: url("data:image/png;base64,{b64}");
-            background-size: cover;
-            background-attachment: fixed;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 
-# Apply background
-set_bg("assets/SELECTED_background_for_portfolio.PNG")  # no spaces
+st.markdown(
+    """
+    <style>
+    [data-testid="stAppViewContainer"] {
+        background-image: url('https://media.githubusercontent.com/media/y-india/portfolio_website_private/refs/heads/main/assets/SELECTED_background_for_portfolio.PNG');
+        background-size: cover;          /* makes it full screen */
+        background-position: center;     /* centers the image */
+        background-repeat: no-repeat;    /* prevents tiling */
+        background-attachment: fixed;    /* stays in place while scrolling */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Background
 page_bg_img = """
