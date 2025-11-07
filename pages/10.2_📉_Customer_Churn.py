@@ -110,7 +110,7 @@ st.subheader("🔗 Links")
 st.markdown("""
 <div class="highlight-box">
 <b>GitHub Repository:</b>  
-<a href="https://github.com/y-india/project-Customer-churn-prediction" target="_blank">ADD_YOUR_GITHUB_LINK_HERE</a>
+<a href="https://github.com/y-india/project-Customer-churn-prediction" target="_blank">https://github.com/y-india/project-Customer-churn-prediction</a>
 </div>
 """, unsafe_allow_html=True)
 
