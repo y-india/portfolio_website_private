@@ -68,7 +68,7 @@ st.markdown("""
     <div class="contact-links">
         <p><b>Email:</b> <a href="mailto:y.india.main@gmail.com">y.india.main@gmail.com</a></p>
         <p><b>GitHub:</b> <a href="https://github.com/y-india" target="_blank">github.com/y-india</a></p>
-        <p><b>LinkedIn:</b>www.linkedin.com/in/yranaind</p>
+        <p><b>LinkedIn:</b><a href="www.linkedin.com/in/yranaind" target="_blank">linkedin.com/in/yranaind"</p>
         <p><b>Streamlit Cloud:</b> <a href = "https://share.streamlit.io/" target="_blank">https://share.streamlit.io/</a></p>
     </div>
 </div>
