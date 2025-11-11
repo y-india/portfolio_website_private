@@ -103,9 +103,9 @@ with col2:
         > Python, NumPy, Pandas (and related libraries)<br>
         > Machine Learning with Scikit-learn<br>
         > Computer Vision with OpenCV<br>
+        > Data Analytics: cleaning, preprocessing, visualization, and analysis<br>
         > Streamlit App Development<br>
-        > Data Visualization and Automation<br>
-
+        > Automation and data-driven solutions<br>
         <br>
 
         I like working on projects from start to finish — understanding the problem, 
@@ -120,9 +120,10 @@ with col2:
 
         <br><br>
 
-        Right now, I’m building my portfolio, working on machine learning projects, and 
-        starting freelancing to gain real experience and help others with data-driven 
-        solutions. Every day I learn something new, and I’m excited to keep growing.
+        Right now, I’m building my portfolio, 
+        and I’m working on machine learning and data analytics projects, 
+        and starting freelancing to gain real experience and help others with data-driven solutions. 
+        Every day I learn something new, and I’m excited to keep growing.
         </div>
         """,
         unsafe_allow_html=True
