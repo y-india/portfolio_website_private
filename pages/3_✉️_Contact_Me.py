@@ -29,9 +29,6 @@ st.markdown(
 # Background
 page_bg_img = """
 <style>
-[data-testid="stAppViewContainer"] {
-    
-}
 .contact-box, .logo-box {
     background-color: rgba(0,0,0,0.75);
     padding: 25px;
@@ -39,16 +36,17 @@ page_bg_img = """
     text-align: center;
     width: 380px;
     margin: auto;
+    color: white;  /* ensures all text inside is white */
 }
-.contact-box {
-    margin-top: 10vh;
+.contact-box h2 {
+    color: #4EC8F4; /* Optional: make heading stand out */
 }
 .contact-links p {
     font-size: 18px;
     margin: 10px 0;
 }
 .contact-links a {
-    color: #4EC8F4;
+    color: #4EC8F4 !important;
     font-weight: bold;
     text-decoration: none;
 }
@@ -61,6 +59,7 @@ page_bg_img = """
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
+
 # Contact Info Box
 st.markdown("""
 <div class="contact-box">
@@ -68,10 +67,20 @@ st.markdown("""
     <div class="contact-links">
         <p><b>Email:</b> <a href="mailto:y.india.main@gmail.com">y.india.main@gmail.com</a></p>
         <p><b>GitHub:</b> <a href="https://github.com/y-india" target="_blank">github.com/y-india</a></p>
-        <p><b>LinkedIn:</b><a href="https://www.linkedin.com/in/yranaind/" target="_blank">linkedin.com/in/yranaind</p>
-        <p><b>Streamlit Cloud:</b> <a href = "https://share.streamlit.io/" target="_blank">https://share.streamlit.io/</a></p>
+        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yranaind/" target="_blank">linkedin.com/in/yranaind</a></p>
+        <p><b>StreamlitCloud:</b> <a href="https://share.streamlit.io/" target="_blank">share.streamlit.io</a></p>
     </div>
 </div>
+
+<style>
+.contact-box h2 {
+    color: white !important;  /* make heading readable */
+}
+.contact-box a {
+    color: #4EC8F4 !important; /* make links consistent */
+    text-decoration: none;
+}
+</style>
 """, unsafe_allow_html=True)
 # Start Platforms box
 st.markdown("""

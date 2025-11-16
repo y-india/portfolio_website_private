@@ -153,8 +153,12 @@ projects_third = [
     "title": "My Portfolio Website",
     "img": img_to_base64("website_portfolio_monotone_icon_in_powerpoint_pptx_png_and_editable_eps_format_slide01.jpg"),
     "page": "pages/10.7_💼_My_Portfolio.py"
+},
+{
+    "title": "Retail Sales Analysis (Under Work)",
+    "img": img_to_base64("project_pictures/EXCEL of Store Sales.png"), 
+    "page": "pages/10.8_📊_Retail_Sales_Analysis.py"  
 }
-
 ]
 
 
@@ -203,7 +207,7 @@ for col, proj in zip(cols_second, projects_second):
         if st.button(proj["title"], key=proj["page"]):
             st.switch_page(proj["page"])
 
-cols_third = st.columns(1)
+cols_third = st.columns(3)
 for col, proj in zip(cols_third, projects_third):
     with col:
         st.markdown(card(proj["img"], proj["title"]), unsafe_allow_html=True)
