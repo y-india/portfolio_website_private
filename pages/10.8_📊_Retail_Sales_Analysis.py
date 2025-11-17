@@ -71,15 +71,33 @@ All code and progress are available on GitHub.
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# ------------ GITHUB LINK ------------
-st.subheader("🔗 GitHub Repository")
-st.markdown("""
-<div class="highlight-box">
-<a href="https://github.com/y-india/retail-sales-analysis-project?tab=readme-ov-file" target="_blank">Click here to visit the GitHub repository</a>
-</div>
-""", unsafe_allow_html=True)
+# -----------------------------------------------------------
+# GitHub Link
+# -----------------------------------------------------------
+st.markdown(
+    """
+    <div style="text-align:center;">
+        <a href="https://github.com/y-india/retail-sales-analysis-project" target="_blank">
+            <button style="
+                background-color:#00BFFF;
+                border:none;
+                color:white;
+                padding:14px 28px;
+                font-size:17px;
+                font-weight:600;
+                border-radius:12px;
+                cursor:pointer;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            ">
+            🔗 View Repository on GitHub
+            </button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
-st.markdown("<br>", unsafe_allow_html=True)
+
 
 # ------------ PROJECT DESCRIPTION ------------
 st.subheader("📘 Project Overview")
