@@ -87,7 +87,7 @@ with col2:
         ">
         <h2 style="font-weight:800;">About Me</h2>
 
-        Helloo, age is 17 ,I’m <b>Yuvraj Rana</b>, a beginner Python and Machine Learning developer from a 
+        Helloo ,I’m <b>Yuvraj Rana</b>, a beginner Python and Machine Learning developer from a 
         village near Ambala, Haryana. I’m a self-taught learner who enjoys exploring technology 
         and building things that make life easier.
 
