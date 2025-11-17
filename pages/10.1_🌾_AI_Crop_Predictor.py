@@ -92,8 +92,8 @@ st.write(
     """
     <div class="highlight-box">
         <b>GitHub Repository:</b>
-        <a href="https://github.com/y-india/AI-Based-Crop-Predictor-Haryana" target="_blank">
-            https://github.com/y-india/AI-Based-Crop-Predictor-Haryana
+        <a href="https://github.com/y-india/project-AI-Based-Crop-Predictor-for-Haryana-Farmerss" target="_blank">
+            https://github.com/y-india/project-AI-Based-Crop-Predictor-for-Haryana-Farmerss
         </a>
     </div>
     """,
@@ -194,7 +194,7 @@ st.image("project_pictures/ai-based-crop-recomand-project/PremiumAIImageCrop.png
 
 # ---------------------- LINKS REPEATED ----------------------
 st.write("### 🔗 GitHub Repository")
-st.write("https://github.com/y-india/AI-Based-Crop-Predictor-Haryana")
+st.write("https://github.com/y-india/project-AI-Based-Crop-Predictor-for-Haryana-Farmerss")
 
 st.write("### 🚀 Live Application")
 st.write("https://project-ai-based-crop-predictor-for-haryana-farmerss-wcwauffdt.streamlit.app/  \n*(May take a few seconds to load)*")
