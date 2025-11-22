@@ -1,5 +1,7 @@
 import streamlit as st
 import base64
+from utils.theme import apply_theme
+
 
 # ------------ REMOVE TOP SPACE ----------
 st.markdown("""
@@ -17,7 +19,7 @@ st.markdown("""
 
 # ------------ STREAMLIT WIDE MODE ------------
 st.set_page_config(layout="wide")
-
+apply_theme()
 # ------------ HIGHLIGHT BOX STYLE ------------
 st.markdown("""
 <style>

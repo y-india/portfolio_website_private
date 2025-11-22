@@ -1,5 +1,6 @@
 import streamlit as st
 import base64
+from utils.theme import apply_theme
 
 
 
@@ -11,7 +12,7 @@ import base64
 # ---------- PAGE SETTINGS ----------
 st.set_page_config(page_title="💼 My Portfolio Project", layout="wide")
 
-
+apply_theme()
 st.markdown(
     """
     <style>

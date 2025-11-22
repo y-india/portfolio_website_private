@@ -1,6 +1,8 @@
 # https://project-road-accident-severity-prediction-system-jwjbruwbaroal.streamlit.app/
 # https://github.com/y-india/project-Road-Accident-Severity-Prediction-System/tree/main
 
+from utils.theme import apply_theme
+
 
 
 import streamlit as st
@@ -8,7 +10,7 @@ import base64
 
 # ---------------------- PAGE CONFIG ----------------------
 st.set_page_config(layout="wide")
-
+apply_theme()
 # ---------------------- REMOVE TOP SPACE (multi-version safe) ----------------------
 st.markdown("""
 <style>

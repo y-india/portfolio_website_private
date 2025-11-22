@@ -1,5 +1,8 @@
 import streamlit as st
 import base64
+from utils.theme import apply_theme
+
+
 
 def card(img64, title):
     return f"""
@@ -163,7 +166,7 @@ projects_third = [
 
 
 st.set_page_config(layout="wide", page_title="Projects")
-
+apply_theme()
 st.markdown("""
 <div style="
     text-align:center;

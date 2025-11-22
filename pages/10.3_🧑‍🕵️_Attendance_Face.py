@@ -1,6 +1,8 @@
 # https://github.com/y-india/project-Smart-Attendance-System-opencv/tree/main
 
 
+from utils.theme import apply_theme
+
 
 import streamlit as st
 import base64
@@ -49,7 +51,7 @@ st.markdown("""
 
 # ------------ STREAMLIT WIDE MODE ------------
 st.set_page_config(layout="wide")
-
+apply_theme()
 # ------------ HIGHLIGHT BOX STYLE ------------
 st.markdown("""
 <style>

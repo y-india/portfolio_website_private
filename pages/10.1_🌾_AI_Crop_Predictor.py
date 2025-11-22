@@ -1,5 +1,7 @@
 import streamlit as st
 import base64
+from utils.theme import apply_theme
+
 
 
 st.markdown("""
@@ -21,7 +23,7 @@ st.markdown("""
 
 
 st.set_page_config(layout="wide")
-
+apply_theme()
 # ✅ CSS for black text highlight boxes
 st.markdown("""
 <style>

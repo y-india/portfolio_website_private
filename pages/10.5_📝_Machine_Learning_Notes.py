@@ -1,6 +1,7 @@
 import streamlit as st
 import base64
 
+from utils.theme import apply_theme
 
 
 
@@ -28,6 +29,11 @@ st.markdown("""
 # Page Configuration
 # -----------------------------------------------------------
 st.set_page_config(page_title="Machine Learning Notes | Yuvraj", layout="wide")
+
+
+
+
+apply_theme()
 # ---------------------- BACKGROUND IMAGE ----------------------
 def set_bg(image_file):
     with open(image_file,"rb") as f:

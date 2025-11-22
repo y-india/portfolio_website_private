@@ -1,9 +1,10 @@
 import streamlit as st
 import base64
+from utils.theme import apply_theme
 
 # ------------ STREAMLIT WIDE MODE ------------
 st.set_page_config(layout="wide")
-
+apply_theme()
 # ------------ REMOVE TOP SPACE ----------
 st.markdown("""
 <style>

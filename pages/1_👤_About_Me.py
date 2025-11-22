@@ -1,10 +1,14 @@
 import streamlit as st
 import base64
+from utils.theme import apply_theme  # <- this should now resolve
+
+
+
 # https://media.githubusercontent.com/media/y-india/portfolio_website_private/refs/heads/main/assets/full_blur_background.PNG
 # Page settings
 st.set_page_config(page_title="About | Yuvraj", layout="wide")
-import streamlit as st
 
+apply_theme()
 st.markdown(
     """
     <style>

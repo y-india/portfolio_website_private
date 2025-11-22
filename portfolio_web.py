@@ -1,9 +1,11 @@
 import streamlit as st
 import base64
+from utils.theme import apply_theme
+
 
 # Page setup
 st.set_page_config(page_title="Yuvraj | Portfolio", layout="wide")
-
+apply_theme()
 # Custom top header bar
 st.markdown("""
 <style>

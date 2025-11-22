@@ -1,5 +1,7 @@
 import streamlit as st
 import base64
+from utils.theme import apply_theme
+
 
 # ---------------------- REMOVE TOP SPACE (multi-version safe) ----------------------
 st.markdown("""
@@ -17,7 +19,7 @@ st.markdown("""
 
 # ---------------------- PAGE CONFIG ----------------------
 st.set_page_config(layout="wide")
-
+apply_theme()
 # ---------------------- STYLES: HIGHLIGHT BOX + IMG CAPTIONS + TITLE ----------------------
 st.markdown("""
 <style>

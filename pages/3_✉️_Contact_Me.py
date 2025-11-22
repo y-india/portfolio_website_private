@@ -1,4 +1,5 @@
 import streamlit as st
+from utils.theme import apply_theme
 
 import base64
 
@@ -8,7 +9,7 @@ def get_base64(path):
 
 
 st.set_page_config(page_title="Contact Me", layout="centered")
-
+apply_theme()
 
 
 st.markdown(
