@@ -30,6 +30,57 @@ st.markdown("""
 import os
 
 
+
+
+
+
+
+
+
+
+st.markdown("""
+<style>
+/* White button with soft white glow + black text */
+.glow-btn {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #000000 !important;               /* black text */
+    border: 2px solid rgba(255,255,255,0.6) !important;
+    border-radius: 16px !important;
+    padding: 16px 20px !important;
+    font-size: 17px !important;
+    font-weight: 800 !important;
+    width: 100% !important;
+    height: 100% !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25) !important;
+    transition: all 0.4s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Beautiful white glow + lift on hover */
+.glow-btn:hover {
+    transform: translateY(-5px) !important;
+    background: white !important;
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.7),
+        0 0 60px rgba(255, 255, 255, 0.4),
+        0 15px 40px rgba(0,0,0,0.3) !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
 st.markdown(
     """
     <style>
@@ -117,18 +168,29 @@ function slideOut(){
 """
 st.markdown(slide, unsafe_allow_html=True)
 
-# Buttons below text
-col1, col2, col3 = st.columns([1,1,1])
+# — BEAUTIFUL 4 buttons that look identical + Hire Me stands out just the right amount —
+# — 4 buttons with CSS glow magic —
+col1, col2, col3, col4 = st.columns(4)
+
 with col1:
-    if st.button("👤_About"):
+    if st.button("👤 About", use_container_width=True, key="about_btn"):
         st.switch_page("pages/1_👤_About_Me.py")
 
 with col2:
-    if st.button("📂_Projects"):
+    if st.button("📂 Projects", use_container_width=True, key="projects_btn"):
         st.switch_page("pages/2_📂_My_Projects.py")
 
 with col3:
-    if st.button("✉️_Contact"):
+    if st.button("✉️ Contact", use_container_width=True, key="contact_btn"):
         st.switch_page("pages/3_✉️_Contact_Me.py")
 
-
+with col4:
+    HIRE_ME_LINK = "https://yuvrajfreelance.streamlit.app/"  # ← UPDATE THIS
+    
+    st.markdown(f"""
+    <a href="{HIRE_ME_LINK}" target="_blank" style="text-decoration: none;">
+        <button class="glow-btn">
+            🤝 Let’s Work Together
+        </button>
+    </a>
+    """, unsafe_allow_html=True)
