@@ -35,11 +35,13 @@ h1 {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------------- BACKGROUND IMAGE (OPTIONAL) ----------------------
+
+# ---------------------- BACKGROUND IMAGE ----------------------
 def set_bg(image_file):
-    with open(image_file, "rb") as f:
+    with open(image_file,"rb") as f:
         b64 = base64.b64encode(f.read()).decode()
-    st.markdown(f"""
+    st.markdown(
+        f"""
         <style>
         [data-testid="stAppViewContainer"] {{
             background: url("data:image/png;base64,{b64}");
@@ -47,7 +49,12 @@ def set_bg(image_file):
             background-attachment: fixed;
         }}
         </style>
-    """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True
+    )
+
+set_bg("project_pictures/background_retail_project.png")
+
 
 
 # ---------------------- IMAGE BASE URL ----------------------
@@ -184,6 +191,7 @@ st.markdown("""
 # ---------------------- CONCLUSION ----------------------
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.subheader("🏁 Conclusion")
+
 st.markdown("""
 <div class="highlight-box">
 This project showcases strong data science and machine learning engineering skills by transforming raw retail data into a production-ready forecasting system. It highlights real-world business insights, robust pipelines, and deployment readiness.
