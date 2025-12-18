@@ -2,29 +2,44 @@ import streamlit as st
 import base64
 from utils.theme import apply_theme
 
-# ------------ STREAMLIT WIDE MODE ------------
+# ---------------------- PAGE CONFIG ----------------------
 st.set_page_config(layout="wide")
 apply_theme()
-# ------------ REMOVE TOP SPACE ----------
+
+# ---------------------- GLOBAL CSS ----------------------
 st.markdown("""
 <style>
 [data-testid="stAppViewContainer"] > .main,
 .main > .block-container,
-.block-container,
-.css-18e3th9,
-.css-1d391kg {
+.block-container {
     padding-top: 0 !important;
     margin-top: 0 !important;
+}
+
+.highlight-box {
+    background-color: black;
+    color: white !important;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+h1 {
+    color: #e6eef5 !important;
+    text-shadow: 0px 0px 4px black;
+    font-size: 46px !important;
+    text-align: center;
 }
 </style>
 """, unsafe_allow_html=True)
 
-# ------------ BACKGROUND IMAGE FUNCTION ------------
+# ---------------------- BACKGROUND IMAGE (OPTIONAL) ----------------------
 def set_bg(image_file):
-    with open(image_file,"rb") as f:
+    with open(image_file, "rb") as f:
         b64 = base64.b64encode(f.read()).decode()
-    st.markdown(
-        f"""
+    st.markdown(f"""
         <style>
         [data-testid="stAppViewContainer"] {{
             background: url("data:image/png;base64,{b64}");
@@ -32,94 +47,160 @@ def set_bg(image_file):
             background-attachment: fixed;
         }}
         </style>
-        """,
-        unsafe_allow_html=True
-    )
+    """, unsafe_allow_html=True)
 
-# Replace with your background image path
-set_bg("project_pictures/background_retail_project.png")
 
-# ------------ HEADING STYLE ------------
-st.markdown("""
-<style>
-h1 {
-    color: #e6eef5 !important;
-    text-shadow: 0px 0px 4px black;
-    font-size: 48px !important;
-    text-align: center;
-}
-.highlight-box {
-    background-color: rgba(0,0,0,0.6);
-    color: white !important;
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 20px;
-    line-height: 1.5;
-}
-</style>
-""", unsafe_allow_html=True)
+# ---------------------- IMAGE BASE URL ----------------------
+IMG_BASE = "https://github.com/y-india/images_hosting/blob/main"
 
-# ------------ TITLE ------------
-st.title("🛒 Retail Sales Analysis Project 🛒")
-
-# ------------ UNDER DEVELOPMENT NOTE ------------
-st.markdown("""
-<div class="highlight-box">
-⚠️ This project is currently under development and will be updated regularly.
-All code and progress are available on GitHub.
-</div>
-""", unsafe_allow_html=True)
-
+# ---------------------- TITLE ----------------------
+st.title("Retail Sales Forecasting & Analysis System")
 st.markdown("<br>", unsafe_allow_html=True)
 
-# -----------------------------------------------------------
-# GitHub Link
-# -----------------------------------------------------------
-st.markdown(
-    """
-    <div style="text-align:center;">
-        <a href="https://github.com/y-india/retail-sales-analysis-project" target="_blank">
-            <button style="
-                background-color:#00BFFF;
-                border:none;
-                color:white;
-                padding:14px 28px;
-                font-size:17px;
-                font-weight:600;
-                border-radius:12px;
-                cursor:pointer;
-                box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-            ">
-            🔗 View Repository on GitHub
-            </button>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-
-
-# ------------ PROJECT DESCRIPTION ------------
-st.subheader("📘 Project Overview")
+# ---------------------- OVERVIEW ----------------------
+st.subheader("📘 Overview")
 st.markdown("""
 <div class="highlight-box">
-This project aims to analyze and forecast retail store sales using historical sales and store information datasets.<br>
-Tech stack: Python (pandas, numpy, matplotlib, seaborn), Jupyter Notebook.<br>
-Future updates will include exploratory data analysis, sales trend visualizations, predictive modeling and many many more.
+End-to-end machine learning project that analyzes and forecasts retail store sales using historical daily sales data and store-level metadata. The project demonstrates the complete ML lifecycle including data cleaning, feature engineering, exploratory data analysis, modeling, evaluation, and deployment via a Streamlit dashboard.
 </div>
 """, unsafe_allow_html=True)
 
-# ------------ NAVIGATION BUTTONS ------------
-st.markdown("<br><br>", unsafe_allow_html=True)
+st.image(
+    f"{IMG_BASE}/sales_important_graph.png?raw=true",
+    caption="Key sales insights discovered during exploratory data analysis"
+)
 
-col1, col2, col3, col4, col5, col6, col7, col8, col9 = st.columns(9)
-with col7:
-    if st.button("About Me"):
-        st.switch_page("pages/1_👤_About_Me.py")
-with col8:
-    if st.button("Projects"):
-        st.switch_page("pages/2_📂_My_Projects.py")
-with col9:
-    if st.button("📞 Contact"):
-        st.switch_page("pages/3_✉️_Contact_Me.py")
+# ---------------------- LINKS ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.subheader("🔗 Project Links")
+st.markdown(f"""
+<div class="highlight-box">
+<b>GitHub Repository:</b><br>
+<a href="https://github.com/y-india/retail-sales-analysis-project" target="_blank">
+https://github.com/y-india/retail-sales-analysis-project
+</a>
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------------- PROBLEM STATEMENT ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.subheader("🚨 Problem Statement")
+st.markdown("""
+<div class="highlight-box">
+Retail businesses face challenges in accurately forecasting daily sales due to seasonality, promotions, competition, and store-level variability. Traditional forecasting methods fail to capture complex patterns, leading to inventory inefficiencies and revenue loss.
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------------- SOLUTION OVERVIEW ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.subheader("✅ Solution Overview")
+st.markdown("""
+<div class="highlight-box">
+A scalable ML pipeline was developed to preprocess raw retail data, engineer meaningful features, perform deep exploratory analysis, and train multiple regression models. The best-performing model (XGBoost) is deployed through an interactive Streamlit dashboard for real-time sales forecasting.
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------------- PROJECT TIMELINE ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.subheader("📆 7-Day Project Timeline")
+st.markdown("""
+<div class="highlight-box">
+<b>Day 1:</b> Data loading, merging, inspection<br>
+<b>Day 2:</b> Data cleaning & feature engineering<br>
+<b>Day 3:</b> Exploratory Data Analysis (EDA)<br>
+<b>Day 4:</b> Model training & tuning (Linear, HGB, XGBoost)<br>
+<b>Day 5:</b> Evaluation, diagnostics & error analysis<br>
+<b>Day 6:</b> Production-ready prediction pipeline<br>
+<b>Day 7:</b> Interactive Streamlit dashboard deployment
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------------- MODEL RESULTS ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.subheader("📊 Model Performance & Results")
+st.markdown("""
+<div class="highlight-box">
+✅ Best Model: Tuned XGBoost Regressor<br>
+✅ RMSE: ~870 | Accuracy Score: ~93.6%<br>
+✅ Sales–Customer Correlation: 0.82<br>
+✅ Promotions increased sales by ~39%
+</div>
+""", unsafe_allow_html=True)
+
+st.image(
+    f"{IMG_BASE}/actual_vs_predicted_sales.png?raw=true",
+    caption="Actual vs Predicted Retail Sales"
+)
+
+st.image(
+    f"{IMG_BASE}/distribution_of_prediction_errors.png?raw=true",
+    caption="Distribution of prediction errors"
+)
+
+st.image(
+    f"{IMG_BASE}/learning_curve.png?raw=true",
+    caption="Learning curve showing model generalization"
+)
+
+# ---------------------- MODEL & PIPELINE SNAPSHOTS ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.subheader("🧠 Model & Pipeline Snapshots")
+st.image(
+    f"{IMG_BASE}/checking_unique_values_code.png?raw=true",
+    caption="Data validation & integrity checks"
+)
+
+st.image(
+    f"{IMG_BASE}/data_selection_code.png?raw=true",
+    caption="Feature selection & preprocessing logic"
+)
+
+st.image(
+    f"{IMG_BASE}/code_example_frpom_projects.png?raw=true",
+    caption="Production-ready prediction pipeline implementation"
+)
+
+# ---------------------- TECH STACK ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.subheader("🛠 Skills & Tools Used")
+st.markdown("""
+<div class="highlight-box">
+Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, Joblib, Jupyter Notebook, Streamlit, Git & GitHub
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------------- FUTURE WORK ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.subheader("🚀 Future Enhancements")
+st.markdown("""
+<div class="highlight-box">
+• Advanced feature engineering (lags & rolling windows)<br>
+• Multi-step time series forecasting<br>
+• Deep learning models (LSTM, Prophet, CatBoost)<br>
+• Cloud deployment & performance optimization
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------------- CONCLUSION ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.subheader("🏁 Conclusion")
+st.markdown("""
+<div class="highlight-box">
+This project showcases strong data science and machine learning engineering skills by transforming raw retail data into a production-ready forecasting system. It highlights real-world business insights, robust pipelines, and deployment readiness.
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------------- NAVIGATION ----------------------
+st.markdown("<br><br>", unsafe_allow_html=True)
+if st.button("⬅️ Back to Home"):
+    st.switch_page("portfolio_web.py")
+
+# ---------------------- FOOTER ----------------------
+st.markdown("""
+<hr style='border: 0.5px solid #ccc;'>
+<p style='text-align:center; color:gray; font-size:0.9rem;'>
+© 2025 Yuvraj | Built with Streamlit & Machine Learning
+</p>
+""", unsafe_allow_html=True)
+
+

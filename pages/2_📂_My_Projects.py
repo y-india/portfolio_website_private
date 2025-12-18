@@ -158,7 +158,7 @@ projects_third = [
     "page": "pages/10.7_💼_My_Portfolio.py"
 },
 {
-    "title": "Retail Sales Analysis (Under Work)",
+    "title": "Retail Sales Analysis & Forecasting System",
     "img": img_to_base64("project_pictures/EXCEL of Store Sales.png"), 
     "page": "pages/10.8_📊_Retail_Sales_Analysis.py"  
 }
