@@ -177,7 +177,7 @@ st.markdown(slide, unsafe_allow_html=True)
 
 # — BEAUTIFUL 4 buttons that look identical + Hire Me stands out just the right amount —
 # — 4 buttons with CSS glow magic —
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     if st.button("👤 About", use_container_width=True, key="about_btn"):
@@ -191,7 +191,23 @@ with col3:
     if st.button("✉️ Contact", use_container_width=True, key="contact_btn"):
         st.switch_page("pages/3_✉️_Contact_Me.py")
 
+
+
 with col4:
+    st.markdown("""
+    <a href="https://drive.google.com/file/d/1JorG46WFLgAKYMA0AEmMV6KLjD_CRqIw/view?usp=sharing"
+       target="_blank" style="text-decoration: none;">
+        <button class="glow-btn">
+            📄 View Resume
+        </button>
+    </a>
+    """, unsafe_allow_html=True)
+
+
+
+
+
+with col5:
     HIRE_ME_LINK = "https://yuvrajfreelance.streamlit.app/"  # ← UPDATE THIS
     
     st.markdown(f"""
@@ -201,3 +217,9 @@ with col4:
         </button>
     </a>
     """, unsafe_allow_html=True)
+
+
+
+
+
+    
