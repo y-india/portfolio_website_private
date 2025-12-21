@@ -1,18 +1,22 @@
+
+
 import streamlit as st
 import base64
-from utils.theme import apply_theme
 
 
 
-def card(img64, title):
+def card(img, title):
+    if img.startswith("http"):
+        img_src = img
+    else:
+        img_src = f"data:image/png;base64,{img}"
+
     return f"""
     <div class="proj-card">
-        <img src="data:image/png;base64,{img64}" class="proj-img"/>
+        <img src="{img_src}" class="proj-img"/>
         <div class="proj-title">{title}</div>
     </div>
     """
-
-
 
 
 # CSS for overlay buttons
@@ -149,24 +153,27 @@ projects_second = [
 ]
 
 # project_data\aicrop_project1\front_aicropdetection_project.png
-
 projects_third = [
     {
-
-    "title": "My Portfolio Website",
-    "img": img_to_base64("website_portfolio_monotone_icon_in_powerpoint_pptx_png_and_editable_eps_format_slide01.jpg"),
-    "page": "pages/10.7_💼_My_Portfolio.py"
-},
-{
-    "title": "Retail Sales Analysis & Forecasting System",
-    "img": img_to_base64("project_pictures/EXCEL of Store Sales.png"), 
-    "page": "pages/10.8_📊_Retail_Sales_Analysis.py"  
-}
+        "title": "My Portfolio Website",
+        "img": img_to_base64("website_portfolio_monotone_icon_in_powerpoint_pptx_png_and_editable_eps_format_slide01.jpg"),
+        "page": "pages/10.7_💼_My_Portfolio.py"
+    },
+    {
+        "title": "Retail Sales Analysis & Forecasting System",
+        "img": img_to_base64("project_pictures/EXCEL of Store Sales.png"),
+        "page": "pages/10.8_📊_Retail_Sales_Analysis.py"
+    },
+    {
+        "title": "Tutoring and Walkthroughs",
+        "img": "https://raw.githubusercontent.com/y-india/images_hosting/main/card_for_tutoring_page.jpg",
+        "page": "pages/10.9_🎓_Tutoring.py"
+    }
 ]
 
 
 st.set_page_config(layout="wide", page_title="Projects")
-apply_theme()
+
 st.markdown("""
 <div style="
     text-align:center;
@@ -218,11 +225,6 @@ for col, proj in zip(cols_third, projects_third):
         # actual clickable button
         if st.button(proj["title"], key=proj["page"]):
             st.switch_page(proj["page"])
-
-
-
-
-
 
 
 

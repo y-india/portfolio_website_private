@@ -163,7 +163,17 @@ improve efficiency, and drive measurable outcomes in real-world environments.
 
 st.markdown("""</div></div>""", unsafe_allow_html=True)
 
-import streamlit as st
+
+
+
+
+
+
+
+
+
+
+
 
 slide = """
 <script>
@@ -217,6 +227,37 @@ with col5:
         </button>
     </a>
     """, unsafe_allow_html=True)
+
+
+
+
+
+
+st.markdown("""
+<div style="
+    margin-top:30px;
+    background: rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:16px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+">
+<h3 style="color:white; text-align:center; margin-bottom:15px;">
+A Demo Video On If , Elif , ELse Statement In Python
+</h3>
+
+<iframe 
+    src="https://drive.google.com/file/d/1278WxSfw4kW1f18oFMZAbMtlwXEAUKbF/preview"
+    width="100%" 
+    height="420"
+    allow="autoplay">
+</iframe>
+</div>
+""", unsafe_allow_html=True)
+
+
 
 
 
