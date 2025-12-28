@@ -80,7 +80,7 @@ with c2:
     ">
     <h3>Basic ML Project</h3>
     <iframe
-        src="https://drive.google.com/file/d/1slaGLRZqsyZUU1SzLuHkwyUHGT4Nr094/preview"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
         width="100%"
         height="240">
     </iframe>
