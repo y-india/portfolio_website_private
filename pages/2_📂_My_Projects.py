@@ -4,6 +4,8 @@ import streamlit as st
 import base64
 
 
+from utils.theme import apply_theme
+apply_theme()
 
 def card(img, title):
     if img.startswith("http"):

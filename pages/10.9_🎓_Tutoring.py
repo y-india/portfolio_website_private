@@ -5,7 +5,8 @@ st.set_page_config(page_title="Tutoring", layout="wide")
 
 
 
-
+from utils.theme import apply_theme
+apply_theme()
 
 
 import base64
@@ -27,6 +28,7 @@ def set_bg_url(image_url):
 set_bg_url(
     "https://raw.githubusercontent.com/y-india/images_hosting/main/background_for_tutoring_page.jpg"
 )
+
 
 
 
