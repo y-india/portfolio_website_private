@@ -1,6 +1,5 @@
 import streamlit as st
 import base64
-from utils.theme import apply_theme  # <- this should now resolve
 
 
 
@@ -8,7 +7,7 @@ from utils.theme import apply_theme  # <- this should now resolve
 # Page settings
 st.set_page_config(page_title="About | Yuvraj", layout="wide")
 
-apply_theme()
+
 st.markdown(
     """
     <style>
@@ -77,61 +76,38 @@ with col1:
     )
 
 
+# ---- About text ----
 with col2:
-    st.markdown(
-        """
-        <div style="
-            background-color: rgba(0,0,0,0.55);
-            padding: 25px;
-            border-radius: 12px;
-            color: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-            font-size:18px;
-            line-height:1.6;
-        ">
-        <h2 style="font-weight:800;">About Me</h2>
+    st.markdown("""
+    <div style="
+        background-color: rgba(0,0,0,0.55);
+        padding: 25px;
+        border-radius: 12px;
+        color: white;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        font-size:18px;
+        line-height:1.6;
+    ">
+    <h2 style="font-weight:800;">About Me</h2>
 
-        Helloo ,I’m <b>Yuvraj Rana</b>, a beginner Python and Machine Learning developer from a 
-        village near Ambala, Haryana. I’m a self-taught learner who enjoys exploring technology 
-        and building things that make life easier.
+    <p>Hello, I’m <b>Yuvraj Rana</b>. I come from a small town near Ambala, Haryana, and I love exploring how technology can solve real problems. I’m a self-taught Python and Machine Learning developer who learns by building, documenting, and iterating.</p>
 
-        <br><br>
+    <p>Right now, my focus is on creating systems that guide learning, career decisions, and practical problem-solving. Every project I do is an experiment in thinking, coding, and understanding the real world.</p>
 
-        I started coding out of curiosity, learning step by step through practice, online resources, 
-        and experimentation. Over time, I discovered my interest in data, machine learning, and 
-        computer vision — and I’ve been learning and creating projects ever since.
+    <p>My approach is simple: I take ideas, test them through code and data, learn from mistakes, and document what works. I often use AI tools like ChatGPT to accelerate my learning, get inspiration, and refine my solutions — always keeping the process my own.</p>
 
-        <br><br>
+    <p><b>Current experiments:</b></p>
+    <ul>
+        <li>AI-driven career guidance systems</li>
+        <li>Stage-based decision support for applications</li>
+        <li>Long-term memory design for AI-driven projects</li>
+        <li>Data-driven automation tools for real-world problems</li>
+    </ul>
 
-        <b>My skills include:</b><br>
-        > Python, NumPy, Pandas (and related libraries)<br>
-        > Machine Learning with Scikit-learn<br>
-        > Computer Vision with OpenCV<br>
-        > Data Analytics: cleaning, preprocessing, visualization, and analysis<br>
-        > Streamlit App Development<br>
-        > Automation and data-driven solutions<br>
-        <br>
+    <p>Every day, I build, test, document, and reflect — creating a growing body of work that will compound over time and open doors to new ideas and opportunities.</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-        I like working on projects from start to finish — understanding the problem, 
-        writing clean code, and turning ideas into working results.
-
-        <br><br>
-
-        I come from a place where tech opportunities are limited, but I’m creating my own 
-        path through consistent learning and real-world practice. I often use 
-        <b>AI tools and chatbots like ChatGPT</b> to learn faster, get ideas, and improve 
-        my code — using them as part of my growth process.
-
-        <br><br>
-
-        Right now, I’m building my portfolio, 
-        and I’m working on machine learning and data analytics projects, 
-        and starting freelancing to gain real experience and help others with data-driven solutions. 
-        Every day I learn something new, and I’m excited to keep growing.
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
 
 st.markdown("<br>", unsafe_allow_html=True)
 

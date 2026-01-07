@@ -1,34 +1,25 @@
 import streamlit as st
-from utils.theme import apply_theme
-
 import base64
 
-def get_base64(path):
-    with open(path, "rb") as f:
-        return base64.b64encode(f.read()).decode()
 
-
-st.set_page_config(page_title="Contact Me", layout="centered")
-apply_theme()
-
-
+# ------------------- Background -------------------
 st.markdown(
     """
     <style>
     [data-testid="stAppViewContainer"] {
         background-image: url('https://media.githubusercontent.com/media/y-india/portfolio_website_private/refs/heads/main/assets/SELECTED_background_for_portfolio.PNG');
-        background-size: cover;          /* makes it full screen */
-        background-position: center;     /* centers the image */
-        background-repeat: no-repeat;    /* prevents tiling */
-        background-attachment: fixed;    /* stays in place while scrolling */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Background
-page_bg_img = """
+# ------------------- Contact box styling -------------------
+st.markdown("""
 <style>
 .contact-box, .logo-box {
     background-color: rgba(0,0,0,0.75);
@@ -37,10 +28,11 @@ page_bg_img = """
     text-align: center;
     width: 380px;
     margin: auto;
-    color: white;  /* ensures all text inside is white */
+    color: white;
 }
 .contact-box h2 {
-    color: #4EC8F4; /* Optional: make heading stand out */
+    color: #4EC8F4;
+    margin-bottom: 15px;
 }
 .contact-links p {
     font-size: 18px;
@@ -57,70 +49,57 @@ page_bg_img = """
     filter: brightness(0) invert(1);
 }
 </style>
-"""
-st.markdown(page_bg_img, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
-
-# Contact Info Box
+# ------------------- Contact Info -------------------
 st.markdown("""
 <div class="contact-box">
     <h2>📬 Contact Me</h2>
+    <p>I’m always exploring AI, Python, and data science projects. 
+       If you have ideas to collaborate, discuss experiments, or share insights, feel free to reach out!</p>
     <div class="contact-links">
         <p><b>Email:</b> <a href="mailto:y.india.main@gmail.com">y.india.main@gmail.com</a></p>
-        <p><b>GitHub:</b> <a href="https://github.com/y-india" target="_blank">github.com/y-india</a></p>
-        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yranaind/" target="_blank">linkedin.com/in/yranaind</a></p>
-        <p><b>StreamlitCloud:</b> <a href="https://share.streamlit.io/" target="_blank">share.streamlit.io</a></p>
+        <p><b>GitHub:</b> <a href="https://github.com/y-india" target="_blank">github.com/y-india (17+ projects)</a></p>
+        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yranaind/" target="_blank">linkedin.com/in/yranaind (500+ connections)</a></p>
+        <p><b>Streamlit Portfolio:</b> <a href="https://share.streamlit.io/" target="_blank">Interactive projects</a></p>
     </div>
+    <p style="margin-top:15px; font-size:16px;">
+        I document everything I build — from small experiments to full projects. Let’s learn together.
+    </p>
 </div>
-
-<style>
-.contact-box h2 {
-    color: white !important;  /* make heading readable */
-}
-.contact-box a {
-    color: #4EC8F4 !important; /* make links consistent */
-    text-decoration: none;
-}
-</style>
 """, unsafe_allow_html=True)
-# Start Platforms box
+
+# ------------------- Social icons -------------------
 st.markdown("""
 <div class="logo-box">
-
-
-<img src="https://cdn.simpleicons.org/gmail/ffffff" width="32">
-<img src="https://cdn.simpleicons.org/github/ffffff" width="32">
-<img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
-        width="34" style="filter: invert(1);">
-<img src="https://cdn.simpleicons.org/streamlit/ffffff" width="32">
+    <img src="https://cdn.simpleicons.org/gmail/ffffff" width="32">
+    <img src="https://cdn.simpleicons.org/github/ffffff" width="32">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" width="34" style="filter: invert(1);">
+    <img src="https://cdn.simpleicons.org/streamlit/ffffff" width="32">
+</div>
 """, unsafe_allow_html=True)
 
+# ------------------- Navigation -------------------
+st.markdown("<br>", unsafe_allow_html=True)
 
-
-
-# Back button
-if st.toggle("⬅️ Back to Home"):
-    st.switch_page("portfolio_web.py")
-
-nav1, nav2, nav3 , nav4 , nav5= st.columns(5)
-
+nav1, nav2, nav3 , nav4 , nav5 = st.columns(5)
 with nav4:
-    if st.button("about Me"):
+    if st.button("About Me"):
         st.switch_page("pages/1_👤_About_Me.py")
-       
 with nav5:
-    if st.button("my Projects"):
+    if st.button("My Projects"):
         st.switch_page("pages/2_📂_My_Projects.py")
-   
 
-
-
+# ------------------- Back button -------------------
+st.markdown("<br>", unsafe_allow_html=True)
+if st.button("⬅️ Back to Home"):
+    st.switch_page("portfolio_web.py")
 st.markdown("<br><br>", unsafe_allow_html=True)
-# Footer
-st.markdown("""
-    <hr style='border: 0.5px solid #ccc;'>
-    <p style='text-align:center; color:black; font-size:0.9rem;'>
-        © 2025 Yuvraj | Built with Streamlit
-    </p>
-""", unsafe_allow_html=True)
 
+# ------------------- Footer -------------------
+st.markdown("""
+<hr style='border: 0.5px solid #ccc;'>
+<p style='text-align:center; color:black; font-size:0.9rem;'>
+    © 2025 Yuvraj | Built with Streamlit
+</p>
+""", unsafe_allow_html=True)
