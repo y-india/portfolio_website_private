@@ -165,11 +165,6 @@ projects_third = [
         "title": "Retail Sales Analysis & Forecasting System",
         "img": img_to_base64("project_pictures/EXCEL of Store Sales.png"),
         "page": "pages/10.8_📊_Retail_Sales_Analysis.py"
-    },
-    {
-        "title": "Tutoring and Walkthroughs",
-        "img": "https://raw.githubusercontent.com/y-india/images_hosting/main/card_for_tutoring_page.jpg",
-        "page": "pages/10.9_🎓_Tutoring.py"
     }
 ]
 

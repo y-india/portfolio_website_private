@@ -1,0 +1,97 @@
+# Highlighted text box (subtle dark overlay)
+st.markdown("""
+<div style="
+    display:inline-block;
+    background-color: rgba(0,0,0,0.55);
+    padding: 20px 28px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    max-width: 850px;
+    margin:auto;">
+<p style="color:white; font-size:20px; line-height:1.5;">
+I specialize in transforming data into intelligent and interactive solutions through advanced Python development,
+machine learning, and computer vision. With hands-on experience in Pandas, NumPy, Matplotlib, Seaborn, scikit-learn,
+OpenCV, and Streamlit, I engineer predictive systems and automation tools that solve practical problems,
+improve efficiency, and drive measurable outcomes in real-world environments.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""</div></div>""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+with col5:
+    HIRE_ME_LINK = "https://yuvrajfreelance.streamlit.app/"  # ← UPDATE THIS
+    
+    st.markdown(f"""
+    <a href="{HIRE_ME_LINK}" target="_blank" style="text-decoration: none;">
+        <button class="glow-btn">
+            🤝 Let’s Work Together
+        </button>
+    </a>
+    """, unsafe_allow_html=True)
+
+
+
+
+with col4:
+    st.markdown("""
+    <a href="https://drive.google.com/file/d/1JorG46WFLgAKYMA0AEmMV6KLjD_CRqIw/view?usp=sharing"
+       target="_blank" style="text-decoration: none;">
+        <button class="glow-btn">
+            📄 View Resume
+        </button>
+    </a>
+    """, unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+st.markdown("""
+<div style="
+    margin-top:30px;
+    background: rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:16px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+">
+<h3 style="color:white; text-align:center; margin-bottom:15px;">
+A Demo Video On If , Elif , ELse Statement In Python
+</h3>
+
+<iframe 
+    src="https://drive.google.com/file/d/1278WxSfw4kW1f18oFMZAbMtlwXEAUKbF/preview"
+    width="100%" 
+    height="420"
+    allow="autoplay">
+</iframe>
+</div>
+""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+    

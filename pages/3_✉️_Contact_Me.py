@@ -1,6 +1,9 @@
 import streamlit as st
 import base64
-
+from utils.theme import apply_theme
+# Page setup
+st.set_page_config(page_title="Contact Me | Yuvraj", layout="wide")
+apply_theme()
 
 # ------------------- Background -------------------
 st.markdown(
@@ -59,9 +62,9 @@ st.markdown("""
        If you have ideas to collaborate, discuss experiments, or share insights, feel free to reach out!</p>
     <div class="contact-links">
         <p><b>Email:</b> <a href="mailto:y.india.main@gmail.com">y.india.main@gmail.com</a></p>
-        <p><b>GitHub:</b> <a href="https://github.com/y-india" target="_blank">github.com/y-india (17+ projects)</a></p>
-        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yranaind/" target="_blank">linkedin.com/in/yranaind (500+ connections)</a></p>
-        <p><b>Streamlit Portfolio:</b> <a href="https://share.streamlit.io/" target="_blank">Interactive projects</a></p>
+        <p><b>GitHub:</b> <a href="https://github.com/y-india" target="_blank">github.com/y-india (20+ repos inculding projects , websites , notes and stuff codes)</a></p>
+        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yranaind/" target="_blank">linkedin.com/in/yranaind (Consistent Posting with Learnings)</a></p>
+        <p><b>Streamlit Portfolio:</b> <a href="https://yuvirana.streamlit.app" target="_blank">Self Made Portfolio (View Projects and stuff)</a></p>
     </div>
     <p style="margin-top:15px; font-size:16px;">
         I document everything I build — from small experiments to full projects. Let’s learn together.
