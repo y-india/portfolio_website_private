@@ -136,32 +136,136 @@ body, [data-testid="stAppViewContainer"] {
 <div class="hero-inner" style="text-align:center;">
 """, unsafe_allow_html=True)
 
-# Headline (slightly darker gray for better contrast)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Headline text
+
+
+
+# st.markdown(
+#     """
+#     <div style="
+#         display:flex;
+#         flex-direction:column;
+#         align-items:center;
+#         justify-content:center;
+#         text-align:center;
+#         margin-bottom:25px;
+#     ">
+#         <h1 style='
+#             color:black;
+#             text-shadow: 2px 2px 8px rgba(255,255,255,0.3);
+#             font-size:56px;
+#             font-weight:800;
+#             margin:0;
+#         '>
+#             HI, I’M YUVRAJ
+#         </h1>
+
+#         <h2 style='
+#             color:black;
+#             font-size:38px;
+#             font-weight:640;
+#             margin-top:6px;
+#         '>
+#             I BUILD AND STUDY INTELLIGENT SYSTEMS
+#         </h2>
+#     </div>
+#     """,
+#     unsafe_allow_html=True,
+# )
+
+
+
+
+
 st.markdown(
-    "<h1 style='color:black; text-shadow: 2px 2px 8px rgba(255,255,255,0.3); font-size:56px; font-weight:800; text-decoration:underline; text-underline-offset:10px;'>HI ! I'm YUVRAJ</h1>",
+    """
+    <div style='text-align:center; margin-top:-65px;'>
+        <h1 style='
+            color:black;
+            text-shadow: 2px 2px 8px rgba(255,255,255,0.3);
+            font-size:56px;
+            font-weight:800;
+            margin:0;
+        '>
+            HI, I’M YUVRAJ
+        </h1>
+    </div>
+    """,
     unsafe_allow_html=True,
 )
 
-# Highlighted text box (subtle dark overlay)
+
+
+
+
+st.markdown(
+    """
+    <div style="text-align:center; margin-top:6px;">
+        <h2 style='
+            color:black;
+            font-size:38px;
+            font-weight:640;
+            margin:0;
+        '>
+            I BUILD AND STUDY INTELLIGENT SYSTEMS
+        </h2>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 st.markdown("""
 <div style="
-    display:inline-block;
+    margin-top:20px;
     background-color: rgba(0,0,0,0.55);
     padding: 20px 28px;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
     max-width: 850px;
-    margin:auto;">
-<p style="color:white; font-size:20px; line-height:1.5;">
-I specialize in transforming data into intelligent and interactive solutions through advanced Python development,
-machine learning, and computer vision. With hands-on experience in Pandas, NumPy, Matplotlib, Seaborn, scikit-learn,
-OpenCV, and Streamlit, I engineer predictive systems and automation tools that solve practical problems,
-improve efficiency, and drive measurable outcomes in real-world environments.
+    margin-left:auto;
+    margin-right:auto;
+">
+<p style="color:white; font-size:20px; line-height:1.6;">
+I am interested in how technology can guide people through complex decisions.
+I spend my time learning, building, and documenting systems around learning, careers, and execution.
+This site is a living record of what I build, what fails, and what I learn over time.
 </p>
 </div>
 """, unsafe_allow_html=True)
-
-st.markdown("""</div></div>""", unsafe_allow_html=True)
 
 
 
@@ -189,78 +293,39 @@ st.markdown(slide, unsafe_allow_html=True)
 # — 4 buttons with CSS glow magic —
 col1, col2, col3, col4, col5 = st.columns(5)
 
-with col1:
+
+with col2:
     if st.button("👤 About", use_container_width=True, key="about_btn"):
         st.switch_page("pages/1_👤_About_Me.py")
 
-with col2:
+with col3:
     if st.button("📂 Projects", use_container_width=True, key="projects_btn"):
         st.switch_page("pages/2_📂_My_Projects.py")
 
-with col3:
+with col4:
     if st.button("✉️ Contact", use_container_width=True, key="contact_btn"):
         st.switch_page("pages/3_✉️_Contact_Me.py")
-
-
-
-with col4:
-    st.markdown("""
-    <a href="https://drive.google.com/file/d/1JorG46WFLgAKYMA0AEmMV6KLjD_CRqIw/view?usp=sharing"
-       target="_blank" style="text-decoration: none;">
-        <button class="glow-btn">
-            📄 View Resume
-        </button>
-    </a>
-    """, unsafe_allow_html=True)
-
-
-
-
-
-with col5:
-    HIRE_ME_LINK = "https://yuvrajfreelance.streamlit.app/"  # ← UPDATE THIS
-    
-    st.markdown(f"""
-    <a href="{HIRE_ME_LINK}" target="_blank" style="text-decoration: none;">
-        <button class="glow-btn">
-            🤝 Let’s Work Together
-        </button>
-    </a>
-    """, unsafe_allow_html=True)
-
-
-
-
 
 
 st.markdown("""
 <div style="
     margin-top:30px;
-    background: rgba(0,0,0,0.6);
-    padding:20px;
-    border-radius:16px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.4);
-    max-width:900px;
+    background: rgba(0,0,0,0.55);
+    padding:20px 26px;
+    border-radius:14px;
+    max-width:700px;
     margin-left:auto;
     margin-right:auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 ">
-<h3 style="color:white; text-align:center; margin-bottom:15px;">
-A Demo Video On If , Elif , ELse Statement In Python
+<h3 style="color:white; margin-bottom:12px; text-align:center;">
+Currently exploring
 </h3>
 
-<iframe 
-    src="https://drive.google.com/file/d/1278WxSfw4kW1f18oFMZAbMtlwXEAUKbF/preview"
-    width="100%" 
-    height="420"
-    allow="autoplay">
-</iframe>
+<ul style="color:white; font-size:18px; line-height:1.6; list-style-type:disc; padding-left:20px;">
+    <li>AI guided career and learning systems</li>
+    <li>Stage based decision support using language models</li>
+    <li>Long term memory design for AI driven applications</li>
+</ul>
 </div>
 """, unsafe_allow_html=True)
-
-
-
-
-
-
-
-    
