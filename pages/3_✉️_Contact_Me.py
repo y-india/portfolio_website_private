@@ -1,6 +1,9 @@
 import streamlit as st
 import base64
-
+from utils.theme import apply_theme
+# Page setup
+st.set_page_config(page_title="Contact Me | Yuvraj", layout="wide")
+apply_theme()
 
 # ------------------- Background -------------------
 st.markdown(
