@@ -323,9 +323,21 @@ Currently exploring
 </h3>
 
 <ul style="color:white; font-size:18px; line-height:1.6; list-style-type:disc; padding-left:20px;">
-    <li>Large language models (LLMs) fundamentals</li>
-    <li>PostgreSQL for AI driven applications</li>
-    <li>Learning FastAPI advance topics like exception handling,etc.</li>
+    <li>Large language models (LLMs) fundamentals .</li>
+    <li>Dart Language for Flutter app development .</li>
+    <li>Learning FastAPI advance topics like exception handling,etc. (Beyond CRUD) .</li>
 </ul>
 </div>
 """, unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
