@@ -53,6 +53,8 @@ def set_bg(image_file):
 
 set_bg("circuit-board-pattern-stockcake.jpg")
 
+
+
 # -----
 # -----------------------------------------------------------
 # Title Section

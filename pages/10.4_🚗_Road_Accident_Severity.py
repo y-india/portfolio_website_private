@@ -253,6 +253,8 @@ st.write("https://github.com/y-india/project-Road-Accident-Severity-Prediction-S
 st.write("### 🚀 Live Application / Demo")
 st.write("https://project-road-accident-severity-prediction-system-jwjbruwbaroal.streamlit.app/  \n*(May need to wakeup)*")
 
+
+
 st.markdown("<br><br>", unsafe_allow_html=True)
 
 # ---------------------- NAVIGATION BUTTONS ----------------------

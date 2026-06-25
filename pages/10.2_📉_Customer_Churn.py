@@ -3,6 +3,7 @@ import base64
 from utils.theme import apply_theme
 
 
+
 # ---------------------- REMOVE TOP SPACE (multi-version safe) ----------------------
 st.markdown("""
 <style>
