@@ -3,6 +3,11 @@ import base64
 from utils.theme import apply_theme
 
 
+st.set_page_config(
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
 # Page setup
 st.set_page_config(page_title="Yuvraj | Portfolio", layout="wide")
 apply_theme()
