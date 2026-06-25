@@ -116,14 +116,14 @@ st.markdown(
 
 projects = [
     {
-        "title": "AI Based Crop Predictor for Haryana Farmers",
-        "img": img_to_base64("project_data/aicrop_project1/front_aicropdetection_project.png"),
-        "page": "pages/10.1_🌾_AI_Crop_Predictor.py"
-    },
-    {
         "title": "Customer Churn Prediction System",
         "img": img_to_base64("project_data/churndetection_project2/FRONT_Customer_Churn_Prediction_Models_in_Machine_Learning.png"),
         "page": "pages/10.2_📉_Customer_Churn.py"
+    },
+    {
+        "title": "AI Based Crop Predictor for Haryana Farmers",
+        "img": img_to_base64("project_data/aicrop_project1/front_aicropdetection_project.png"),
+        "page": "pages/10.1_🌾_AI_Crop_Predictor.py"
     },
     {
         "title": "Attendance System Using Face Recognition",
