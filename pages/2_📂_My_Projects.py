@@ -3,6 +3,9 @@
 import streamlit as st
 import base64
 
+import os
+
+print("Current working directory:", os.getcwd())
 
 from utils.theme import apply_theme
 apply_theme()
@@ -116,9 +119,9 @@ st.markdown(
 
 projects = [
     {
-        "title": "Customer Churn Prediction System",
-        "img": img_to_base64("project_data/churndetection_project2/FRONT_Customer_Churn_Prediction_Models_in_Machine_Learning.png"),
-        "page": "pages/10.2_📉_Customer_Churn.py"
+        "title": "Prompt Polish Tool",
+        "img": "https://github.com/y-india/images_hosting/blob/main/banner.png?raw=true",
+        "page": "pages/10.2_📝_Prompt_Polish_Tool.py"
     },
     {
         "title": "AI Based Crop Predictor for Haryana Farmers",
