@@ -129,9 +129,11 @@ projects = [
         "page": "pages/10.1_🌾_AI_Crop_Predictor.py"
     },
     {
-        "title": "Attendance System Using Face Recognition",
-        "img": img_to_base64("project_data/opencvattandance_project3/front_attandancesystem_project.png"),
-        "page": "pages/10.3_🧑‍🕵️_Attendance_Face.py"
+        
+        "title": "🚀 My Product Journey",
+        "img": img_to_base64("project_pictures/real_world_object_traker_project/Object Detection and_for_button.png"),
+        "page": "pages/10.10_🚀_My_Product_Journey.py"
+
     }
     
 ]
@@ -151,9 +153,12 @@ projects_second = [
         "page": "pages/10.5_📝_Machine_Learning_Notes.py"
     },
     {
-        "title": "RealTime Object Tracker - OpenCV",
-        "img": img_to_base64("project_pictures/real_world_object_traker_project/Object Detection and_for_button.png"),
-        "page": "pages/10.6_👀_RealTime_Object_Tracker.py"
+
+        "title": "Attendance System Using Face Recognition",
+        "img": img_to_base64("project_data/opencvattandance_project3/front_attandancesystem_project.png"),
+        "page": "pages/10.3_🧑‍🕵️_Attendance_Face.py"
+
+
     }
 ]
 
