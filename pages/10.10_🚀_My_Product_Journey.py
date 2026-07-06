@@ -1,15 +1,42 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="Product Journey",
-    page_icon="🚀",
-    layout="wide"
-)
+
+
+# https://github.com/y-india/images_hosting/blob/main/Gemini_Generated_Image_tif7gotif7gotif7.png?raw=true
+
+
+BG_IMAGE_URL = "https://github.com/y-india/images_hosting/blob/main/Gemini_Generated_Image_tif7gotif7gotif7.png?raw=true"
+
+st.markdown(f"""
+<style>
+
+/* Background */
+[data-testid="stAppViewContainer"] {{
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("{BG_IMAGE_URL}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}}
+
+/* Transparent Header */
+[data-testid="stHeader"] {{
+    background: transparent;
+}}
+
+/* Global Text Color */
+html, body, [class*="css"], .stMarkdown, p, li, h1, h2, h3, h4, h5, h6 {{
+    color: white !important;
+}}
+
+</style>
+""", unsafe_allow_html=True)
 
 st.title("🚀 My Product Journey")
+
 st.caption(
-    "From freelancing to product discovery. "
-    "This page documents how my thinking about building startups has evolved."
+    "A timeline of how my approach to building products has evolved through client work, validation, and continuous learning."
 )
 
 st.divider()
@@ -17,201 +44,164 @@ st.divider()
 st.header("August 2025 • Freelancing")
 
 st.write("""
-I started my software development journey as a freelancer.
+I began my journey as a freelancer, working with clients across different domains.
 
-Over the next few months I worked with **10-13 clients**, building real projects
-and learning how software is delivered in production environments.
+During this period I worked with **10-13 clients** on projects involving:
 
-Freelancing taught me:
+- Data Analysis
+- Spreadsheet Automation
+- Tutoring
+- Python Development
 
-- Writing maintainable code
-- Working with deadlines
-- Communicating with clients
-- Turning requirements into working products
+Freelancing gave me exposure to real users, real deadlines, changing requirements,
+and the importance of delivering solutions that actually solve someone's problem.
 
-I eventually paused freelancing to focus on my studies and long-term product building.
-""")
-
-st.info("Biggest lesson: Building software is one skill. Building the right software is another.")
-
-st.divider()
-
-st.header("February - March 2026 • Startup Experiment #1")
-
-st.subheader("The Idea")
-
-st.write("""
-I wanted to build an AI career companion for students and fresh graduates.
-
-The idea was to guide users throughout the hiring process by remembering their
-profile, understanding their interview stage, helping with assignments,
-interview preparation, and reducing uncertainty during job applications.
-""")
-
-st.subheader("Before Building")
-
-st.write("""
-Instead of immediately building the product, I started reading books on
-product management and customer discovery.
-
-Some books that changed my thinking were:
-
-- The Mom Test
-- Competing Against Luck
-""")
-
-st.subheader("Validation")
-
-st.write("""
-My validation process included:
-
-- Collecting potential users through LinkedIn and email
-- Interviewing around 10 target users
-- Running another validation round with 133 collected emails
-- Receiving approximately 30 survey responses
-""")
-
-st.subheader("Outcome")
-
-st.error("""
-The evidence was weak.
-
-People didn't experience the problem strongly enough for the solution to become valuable.
-
-I decided not to build the product.
+As my academic workload increased, I decided to pause freelancing and focus on
+improving my technical skills while exploring product building.
 """)
 
 st.success("""
-What I learned
+**Key takeaway**
 
-• Don't fall in love with ideas.
-• Validate assumptions before writing code.
-• Interviews are more valuable than opinions from friends.
+Building software is valuable, but building something people truly need is even more important.
 """)
 
 st.divider()
 
-st.header("Startup Experiment #2 • PromptPolish")
+st.header("Career Companion")
 
-st.subheader("The Idea")
+st.subheader("The Problem")
 
 st.write("""
-PromptPolish was a Chrome extension designed for developers.
+Many students receive interview assignments, coding assessments, or interview
+calls but struggle to understand what companies actually expect from them.
 
-Instead of manually improving prompts for AI coding assistants,
-users could highlight a prompt and instantly convert it into a structured,
-high-quality prompt using keyboard shortcuts.
-
-The extension also supported:
-
-- Custom prompt styles
-- User preferences
-- Coding language context
-- Theme customization
+I wanted to build an AI companion that could guide students throughout the
+entire hiring journey by understanding their profile, application stage,
+assignments, and interview progress.
 """)
 
 st.subheader("Validation")
 
 st.write("""
-This time I wanted to validate before building.
+Before committing to development, I wanted to understand whether the problem
+was important enough to solve.
 
-I:
+To validate it, I:
 
-- Interviewed more than 20 potential users
-- Created a fake landing page
-- Shared it with LinkedIn connections
-- Used messaging experiments inspired by The Right It
+- Connected with potential users through LinkedIn and email.
+- Conducted one-to-one conversations with around 10 students and fresh graduates.
+- Collected 133 email contacts for a broader validation round.
+- Designed a survey focused on users' experiences and behaviors.
+- Received around 30 responses.
 """)
-
-st.subheader("What Went Wrong")
 
 st.warning("""
-Although I believed I was following The Mom Test,
-I later realized I had been pitching my solution instead of exploring users'
-existing behavior and problems.
+The validation showed that the problem wasn't painful enough for most users,
+and the evidence wasn't strong enough to justify building the product.
 
-The interviews were biased because I focused on my idea instead of their experiences.
-""")
-
-st.success("""
-This failure saved months of development.
-
-I learned that a bad validation process can make a weak idea appear strong.
+Instead of continuing based on assumptions, I decided to move on.
 """)
 
 st.divider()
 
-st.header("What I'm Doing Today")
+st.header("PromptPolish")
+
+st.subheader("The Problem")
 
 st.write("""
-Today I don't start with startup ideas.
+PromptPolish was designed as a Chrome extension that converts raw prompts into
+well-structured prompts using user preferences, shortcuts, and personalized context.
 
-Instead, I start with people.
+The goal was to help beginner developers, college students, and fresh graduates
+communicate more effectively with AI coding assistants.
+""")
 
-I'm conducting open-ended interviews with:
+st.subheader("Validation")
 
-- Fresh graduates
-- Career switchers
-- Job seekers
+st.write("""
+This time I focused on validating before investing significant development time.
 
-My goal is to identify recurring problems before thinking about solutions.
+The process included:
 
-Only after finding a meaningful pattern will I begin validating a product idea.
+- Speaking with more than 20 potential users.
+- Creating a fake landing page.
+- Sharing it with my LinkedIn connections.
+- Testing messaging and interest before building the product.
+""")
+
+st.info("""
+The validation approach inspired by **The Right It** helped me avoid spending
+months building a product that people ultimately didn't want.
+
+Although the idea initially appeared promising, I later realized that many of my
+conversations unintentionally focused on presenting the solution instead of
+deeply understanding users' existing problems.
+
+Recognizing this early saved significant time and effort.
 """)
 
 st.divider()
 
-st.header("Books That Changed My Thinking")
+st.header("What I'm Focused On Today")
+
+st.write("""
+Today my focus is understanding people before thinking about products.
+
+I'm connecting with students, fresh graduates, career switchers, founders,
+and working professionals through LinkedIn, email, and WhatsApp.
+
+Instead of discussing product ideas, I focus on understanding their day-to-day
+frustrations, workflows, challenges, and recurring problems.
+
+My goal is to discover meaningful patterns first and allow product ideas to
+emerge naturally from those conversations.
+""")
+
+st.divider()
+
+st.header("How My Thinking Has Evolved")
 
 col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
-**Product & Startups**
+**Earlier**
 
-- The Mom Test
-- The Right It
-- Competing Against Luck
-    """)
+- Start with an idea.
+- Build quickly.
+- Validate later.
+- Focus on the solution.
+""")
 
 with col2:
     st.markdown("""
-**Other Topics**
+**Today**
 
-- Psychology
-- Business
-- Decision Making
-
-(20+ books read so far.)
-    """)
+- Start with people.
+- Understand their work.
+- Identify recurring problems.
+- Validate before building.
+- and more!
+""")
 
 st.divider()
 
-st.header("My Product Principles")
+st.header("Principles I Follow")
 
-principles = [
-    "Build evidence before code.",
-    "Interview people before designing solutions.",
-    "Validate assumptions early.",
-    "Kill weak ideas quickly.",
-    "Learning is progress, even when a product isn't built."
-]
-
-for p in principles:
-    st.markdown(f"✅ {p}")
+st.markdown("""
+- Build evidence before writing code.
+- Validate assumptions early.
+- Learn from users instead of convincing them.
+- Save months by testing ideas before building.
+- Measure progress through learning, not just shipping.
+""")
 
 st.divider()
 
 st.caption(
-    "This journey is ongoing. Every interview, experiment, and failed assumption "
-    "helps me become a better engineer and product builder."
+    "This journey is still evolving, and every conversation helps me become a better engineer, product thinker, and problem solver."
 )
-
-
-
-
-
-
 
 
 

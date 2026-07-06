@@ -131,7 +131,7 @@ projects = [
     {
         
         "title": "🚀 My Product Journey",
-        "img": img_to_base64("project_pictures/real_world_object_traker_project/Object Detection and_for_button.png"),
+        "img": "https://github.com/y-india/images_hosting/blob/main/ChatGPT%20Image%20Jul%206,%202026,%2004_15_20%20PM.png?raw=true",
         "page": "pages/10.10_🚀_My_Product_Journey.py"
 
     }
